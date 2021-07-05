@@ -22,16 +22,24 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
 
 var number = 0;
 
-
-
 for (var i = 1; i <= 100; i++){
     number = i;
-    console.log(number);
-    
-    if (number % 3 === 0) {
+
+    if ((number % 5 === 0) && (number % 3 === 0)) {
+        number = "FizzBuzz";
+        console.log(number);
+
+    }   else if (number % 3 === 0) {
         number = "Fizz";
         console.log(number);
-    } 
+
+    }   else if (number % 5 === 0) {
+        number = "Buzz";
+        console.log(number);
+        
+    }  else {
+        console.log(number);
+    }
 }
 
 
